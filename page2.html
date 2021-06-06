@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.contiki.com/six-two/wp-content/uploads/2020/04/simon-matzinger-twukN12EN7c-unsplash.jpg);
+            /* background-size: cover;
+            background-position: center; */
+            /* background-image: url("https://cdn.dribbble.com/users/242102/screenshots/5517020/bus.gif"); */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%100%
+        }
+
+        .booking-from-box {
+            max-width: 600px;
+            border: 1px solid #ced4da;
+            margin: 10% auto 0;
+            border-radius: 6px;
+
+        }
+
+        .radio-btn {
+            margin: 0 20px;
+        }
+
+        .radio-btn .btn {
+            margin: 20px 10px 20px 0;
+            box-shadow: none;
+        }
+
+        .radio-btn .btn::after {
+            content: '';
+            height: 15px;
+            width: 15px;
+            top: -2px;
+            left: -1px;
+            background-color: #fff;
+            position: relative;
+            display: inline-block;
+            border: 3px solid #fff;
+            visibility: visible;
+            border-radius: 50%;
+
+        }
+
+        .radio-btn .btn:checked::after {
+            content: '';
+            background-color: #000;
+            transition: 0.5s;
+        }
+
+        .radio-btn span {
+            color: rgb(255, 255, 255);
+            margin-right: 5px;
+            font-size: 20px;
+        }
+
+        .booking-form {
+            padding: 0 25px 20px;
+        }
+
+        .booking-form label {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .input::placeholder {
+            color: #fff !important;
+            /* padding-inline-start: 10px; */
+
+        }
+
+        .input-grp {
+            width: 200px;
+            display: inline-block;
+            padding: 10px 10px 10px 10px;
+
+        }
+
+        .from-control {
+            font-size: 20px !important;
+            border-radius: 0 !important;
+            color: rgb(246, 246, 246) !important;
+            background: transparent !important;
+            box-shadow: none !important;
+
+        }
+
+        .select-date::-webkit-inner-spin-button,
+        .select-date::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .select-date::-webkit-calender-picker-indicator {
+            background: transparent !important;
+        }
+
+        .custom-select {
+            color: #fff !important;
+            font-size: 20px !important;
+            border: 1px solid #ced4da !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            background: transparent !important;
+        }
+
+        .custom-select option {
+            color: #333;
+        }
+
+        .bus {
+            width: 100%;
+            padding: 9px 0 !important;
+            font-size: 20px !important;
+            border: 1px solid #ced4da !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+        }
+
+        .bus:hover {
+            background-color: white !important;
+            color: #000 !important;
+            transition: 0.5s !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="booking-from-box">
+        <div id="page1">
+            <div class="radio-btn">
+                <input type="radio" class="btn" name="check" checked="checked"><span>Roundtrip</span>
+                <input type="radio" class="btn" name="check"><span>One-way</span>
+                <input type="radio" class="btn" name="check"><span>Multy-City</span>
+            </div>
+
+            <div class="booking-form">
+                <lable>From</lable>
+                <input id="from" type="text" class="from-control" placeholder="City"><br><br>
+                <lable>To</lable>
+                <input id="to" type="text" class="from-control" placeholder="City"><br><br>
+
+                <div class="input-grp">
+                    <lable>Departing</lable>
+                    <input type="date" class="from-control select-date">
+                </div>
+
+                <div class="input-grp">
+                    <lable>Returing</lable>
+                    <input type="date" class="from-control select-date">
+                </div>
+
+                <div class="input-grp">
+                    <lable>Travel Class</lable>
+                    <select class="custom-select">
+                        <option value="1">Non-AC-bus</option>
+                        <option value="2">AC bus</option>
+                        <option value="3">Sleeper</option>
+                    </select>
+                </div>
+                <div class="input-grp">
+                    <button type="button" class="btn btn-primary bus">Show Bus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
